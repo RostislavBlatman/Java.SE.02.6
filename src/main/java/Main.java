@@ -6,7 +6,7 @@ public class Main {
         System.out.println("Welcome to your own nuclear submarine! Let's run her on a voyage?");
 
         InteractivePanel ip = new InteractivePanel();
-        ip.action();
+        ip.manageSubmarine();
 
     }
 }

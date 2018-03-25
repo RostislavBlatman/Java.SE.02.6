@@ -8,7 +8,7 @@ public class InteractivePanel {
     private NuclearSubmarine ns = new NuclearSubmarine();
     private String action;
 
-    public void action() {
+    public void manageSubmarine() {
         boolean isOn = true;
 
         System.out.println("Input your command: \ne - Start/turn off the engine;\nw - move forward;\ns - move back;" +
@@ -19,9 +19,9 @@ public class InteractivePanel {
             action = act.next();
             if (action.equals("q")) {
                 isOn = false;
+            }else {
+                ns.move(action);
             }
-            ns.move(action);
-
         }
     }
 }

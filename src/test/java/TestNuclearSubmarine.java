@@ -8,26 +8,23 @@ import static junit.framework.TestCase.assertEquals;
 
 public class TestNuclearSubmarine {
 
-    NuclearSubmarine ns = new NuclearSubmarine();
-
-    @Before
-    public void setUp() {
-        ns.move("e");
-        ns.move("W");
-        ns.move("d");
-    }
+    NuclearSubmarine nuclSub = new NuclearSubmarine();
 
     @Test
-
     public void testForEngine() {
-        assertEquals(ns.getStateOfEngine(), true);
+        nuclSub.move("e");
+        assertEquals(nuclSub.getStateOfEngine(), true);
     }
     @Test
     public void testForRightMove() {
-        assertEquals(ns.getX(), 7);
+        nuclSub.changeStateOfEngine();
+        nuclSub.move("d");
+        assertEquals(nuclSub.getXcoordinate(), 7);
     }
     @Test
     public void testForForwardMove() {
-        assertEquals(ns.getY(), 7);
+        nuclSub.changeStateOfEngine();
+        nuclSub.move("W");
+        assertEquals(nuclSub.getYcoordinate(), 7);
     }
 }
